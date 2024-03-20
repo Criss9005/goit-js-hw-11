@@ -53,7 +53,6 @@ function markUP(searchData) {
 
 async function getData(search) {
   try {
-    
     const response = await axios.get(`https://pixabay.com/api/?key=${apiKey}&q=${search}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`);
     //console.log(response.data);
     totalHits = response.data.totalHits;
