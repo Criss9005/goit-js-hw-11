@@ -1,0 +1,134 @@
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  width: 320px;
+  max-width: 1024px;
+}
+.photo-card {
+  border-radius: 4px;
+  // overflow: hidden;
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.info {
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+//todo----------- Configuración pantalla 320 ----------- /
+@media screen and (min-width: 320px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px 6px;
+    justify-content: center;
+    margin: 10px;
+    justify-content: center;
+  }
+
+  .photo-card {
+    width: 280px;
+    height: 443px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .info {
+    font-size: 15px;
+    justify-content: space-around;
+  }
+
+  .info-item {
+    margin: 0;
+  }
+}
+
+// todo----------- Configuración pantalla 768 ----------- /
+@media screen and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+  .gallery-container {
+    width: 768px;
+  }
+  .photo-card {
+    width: 293px;
+    height: 440px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
+
+// todo----------- Configuración pantalla 1024 ----------- */
+@media screen and (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+  }
+  .gallery-container {
+    width: 1024px;
+  }
+  .photo-card {
+    width: 274px;
+    height: auto;
+  }
+}
+.fail-text {
+  margin: 20px;
+  display: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 0, 27, 1);
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+
+.galleryimage {
+  width: 100%;
+  height: 402px;
+  border-radius: 4px;
+  position: relative;
+  transition: box-shadow 250ms ease-in;
+
+  @media screen and (min-width: 768px) {
+    // width: 274px;
+    height: 398px;
+  }
+  @media screen and (min-width: 1024px) {
+    // width: 274px;
+    height: 398px;
+  }
+}
+
+.galleryimage:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 8px 0px rgba(148, 56, 33, 1);
+  -moz-box-shadow: 3px 3px 8px 0px rgba(148, 56, 33, 1);
+  box-shadow: 3px 3px 8px 0px rgba(148, 56, 33, 1);
+}
+
+.orange-text {
+  color: rgba(255, 107, 8, 1);
+}
+
+.info-item {
+  font-size: 12px;
+}
+
+.gallery {
+  padding-top: 20px;
+
+  @media screen and (min-width=768px) {
+    padding-top: 50px;
+  }
+}
